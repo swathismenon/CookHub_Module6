@@ -1,12 +1,37 @@
-# React + Vite
+CookHub is a full-stack food blog application designed to allow users to easily explore and share recipes.
+Users can browse through various food recipes, add new recipes, edit existing ones, and delete recipes. The app is built using the MERN stack (MongoDB, Express.js, React.js, Node.js) with modern web development best practices to ensure responsiveness, accessibility, and scalability.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tech Stack
+Frontend:
+The user interface is built using React.js, providing a dynamic, interactive experience for users. For styling, the app utilizes CSS for custom styles, ensuring responsiveness across devices.
 
-Currently, two official plugins are available:
+Backend:
+The backend is powered by Node.js and Express.js, making it easy to handle requests and perform CRUD (Create, Read, Update, Delete) operations with the recipes stored in a MongoDB database.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Authentication:
+The app uses JWT (JSON Web Tokens) for user authentication, ensuring secure login and session management. Passwords are securely hashed using bcrypt to protect user data.
 
-## Expanding the ESLint configuration
+Database:
+MongoDB serves as the NoSQL database where all the recipes and user information are stored. Mongoose helps to manage data models and schema validation.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. git clone https://github.com/swathismenon/CookHub_Module6.git
+ cd foodrecipe
+
+2.cd backend
+npm install
+
+3. create .env file
+CONNECTION_STRING=mongodb://localhost:27017/foodRecipe
+
+5. npm run dev
+
+Tracking
+Tracking with Google Analytics is set up for the frontend using react-ga4 to track page views and form submissions. 
+
+Security
+I’ve taken several steps to secure the project, including:
+
+Password hashing: Using bcrypt for secure password storage.
+
+Authentication: Users must log in to access and modify data.
+

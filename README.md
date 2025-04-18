@@ -35,3 +35,15 @@ Password hashing: Using bcrypt for secure password storage.
 
 Authentication: Users must log in to access and modify data.
 
+ecurity Threats on the "foodRecipe" Website
+There are a few security issues that haven't been fully fixed yet:
+
+1. Storing User Info in Cookies
+Right now, the app stores important information like user ID in cookies after the user logs in. If someone gets access to those cookies, they could misuse that information.
+
+2. Cookies Are Not Secure
+The cookies don't have extra protection. Anyone who can read these cookies could steal sensitive information. This could happen because the cookies are not encrypted or protected.
+
+3. Storing Sensitive Data in Local Storage
+I also store some sensitive data like authentication tokens in local storage, which is not very secure. This means if someone is able to run malicious code on the page, they could access this data.
+
